@@ -1,11 +1,21 @@
 {
-  "currencyPair": {
+  "currency_pairs": {
     "BTC/USD": {
-      "priceScale": 4
+      "price_scale": 4
     },
     "BTC/CNY": {
-      "priceScale": 4
+      "price_scale": 4
     }
   },
-  "currency": {}
+  "currencies": {
+    "USD": {
+      "scale": 2
+    },
+    "GBP": {
+      "scale": 2
+    },
+    "EUR": {
+      "scale": 2
+    }
+  }
 }

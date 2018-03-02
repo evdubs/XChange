@@ -1,13 +1,13 @@
 language: java
 sudo: false
 
-before_install: "git clone -b travis `git config --get remote.origin.url` target/travis"
+install: true
 script: "
 if [ ${TRAVIS_PULL_REQUEST} = 'false' ];
 then 
-    mvn clean deploy --settings target/travis/settings.xml; 
+    mvn clean deploy --batch-mode --settings etc/settings.xml;
 else 
-    mvn clean verify --settings target/travis/settings.xml;
+    mvn clean verify --batch-mode --settings etc/settings.xml;
 fi"
 
 jdk:
@@ -20,9 +20,10 @@ branches:
 
 env:
   global:
-    - secure: "SjYAaofkHceGoIuMsojSj0c6rJKPXF1IKkUzh7os7DprulAoL5bLivoawE+K\n011GZrP50cG1zWE8BvGTYtu3R9AUaWmmLbY7P2EfygplM3XGhzcMEK+CoS60\nJ/NaOsufOiKcqBrujrsnH2eS6y2qYIc7BicvfL14h9PovF2lRnw="
-    - secure: "Gg3XDKlwcGeLGqv/JjeDbHDpCU+MxyqDzR/HycZ0NRwjaqeJMbWpNcllr3m9\nC78+vKwTkcxD+A0pEZoDwJ0K78QB4TShH+0cUJjQ7Q4VZBFd3exaV2YvLysC\nChIaQZbBomJReZMNpDKhMKLqNdpn02Pnp3udyDRORUPLnk4g1KE="
-  matrix:
-   - LC_ALL=C
-   - LC_ALL=pl_PL
-   - LC_ALL_zh_CN
+    - secure: "pDTp3TujySuBn3IV5QzgYSsLdLHRDApm2dvKT5P8aHgLDF2tM59a5fWYuA+MiTrZdpbxsUXzxrl4l5+cQyLGI10/hu4R7uft4k46Da78xNA5REki+YU7rjCA6RXdWUuXyhLNFYPWVNt3mgi7YfsyNwRrtS3FQQZn1BOfDJ0s5Vo="
+    - secure: "YwWFnNl4cBEKzRiMjKlfp1VieMkWp4LGENMKzlVs7hy3TWFz4A2pJpRUX76qqWV/6h6vOqY6cogql3NCietzJbspSgwl7MkboPVXYn9HgQkPwrcdQh/h9PzsC63iOW4jyIqHzjVT36MYLYrXTvRrqdMHUjFJmObiNt1KY674d7g="
+
+matrix:
+  - LC_ALL=C
+  - LC_ALL=pl_PL
+  - LC_ALL_zh_CN

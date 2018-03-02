@@ -1,22 +1,44 @@
 {
-  "currencyPair": {
+  "currency_pairs": {
     "BTC/EUR": {
-      "priceScale": 2
+      "price_scale": 2,
+      "min_amount": 0.0002
+    },
+    "BTC/CZK": {
+      "price_scale": 2,
+      "min_amount": 0.0002
+    },
+    "LTC/BTC": {
+      "price_scale": 5,
+      "min_amount": 0.01
+    },
+    "BCH/BTC": {
+      "price_scale": 5,
+      "min_amount": 0.0002
     }
   },
-  "currency": {
+  "currencies": {
     "BTC": {
       "scale": 8
     },
     "EUR": {
       "scale": 2
+    },
+    "CZK": {
+      "scale": 2
+    },
+    "LTC": {
+      "scale": 8
+    },
+    "BCH": {
+      "scale": 8
     }
   },
-  "privateRateLimits": [
+  "private_rate_limits": [
     {
-      "calls" : 600,
-      "timeUnit": "minutes"
+      "calls": 100,
+      "time_unit": "minutes"
     }
   ],
-  "shareRateLimits": true
+  "share_rate_limits": true
 }

@@ -25,6 +25,19 @@ META-INF/
 
 # Misc.
 .DS_Store
+*.swp
+*.swo
 
 # externalized configuration file for keys
 exchangeConfiguration.json
+*secret.keys
+
+# emacs
+*~
+\#*\#
+
+# ignore tags
+GTAGS
+GRTAGS
+GPATH
+GSYMS

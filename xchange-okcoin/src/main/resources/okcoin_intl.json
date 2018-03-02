@@ -1,18 +1,28 @@
 {
-  "currencyPair": {
+  "currency_pairs": {
     "BTC/USD": {
-      "priceScale": 2
+      "min_amount": 0.01,
+      "price_scale": 2
     },
     "LTC/USD": {
-      "priceScale": 2
+      "min_amount": 0.1,
+      "price_scale": 2
+    },
+    "ETH/USD": {
+      "min_amount": 0.01,
+      "price_scale": 2
+    },
+    "ETH/BTC": {
+      "min_amount": 0.01,
+      "price_scale": 8
     }
   },
-  "currency": {},
-  "privateRateLimits": [
+  "currencies": {},
+  "private_rate_limits": [
     {
       "calls": 20,
-      "timeUnit": "seconds"
+      "time_unit": "seconds"
     }
   ],
-  "shareRateLimits": true
+  "share_rate_limits": true
 }
